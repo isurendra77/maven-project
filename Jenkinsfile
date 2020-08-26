@@ -7,3 +7,4 @@ pipeline {
     step([$class: 'hudson.plugins.checkstyle.CheckStylePublisher', pattern: 'checkstyle-*'])
 }
 }
+}
