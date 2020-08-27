@@ -2,8 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage (checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: '') 
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
-}
-
-
