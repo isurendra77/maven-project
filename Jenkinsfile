@@ -15,7 +15,8 @@ node () {
 			} else { 
  				bat "mvn clean package " 
 			} 
- 		} 
+ 		}
+// Unable to convert a build step referring to "hudson.plugins.copyartifact.CopyArtifact". Please verify and convert manually if required. 
 	}
 	stage ('deploy-to-staging - Build') {
  	
