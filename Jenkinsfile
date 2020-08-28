@@ -1,14 +1,13 @@
 
-
 // Powered by Infostretch 
 
 pipeline {
     agent any
-
-timestamps {
+  stages {
+	timestamps {
 
 node () {
-  stages {
+  
 	stage ('package_1 - Checkout') {
  	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/isurendra77/maven-project']]]) 
 	}
