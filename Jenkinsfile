@@ -1,13 +1,9 @@
-
 // Powered by Infostretch 
 
-pipeline {
-    agent any
-  stages {
-	timestamps {
+timestamps {
 
 node () {
-  
+
 	stage ('package_1 - Checkout') {
  	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/isurendra77/maven-project']]]) 
 	}
@@ -25,7 +21,5 @@ node () {
  	
 // Unable to convert a build step referring to "hudson.plugins.copyartifact.CopyArtifact". Please verify and convert manually if required. 
 	}
-}
-}
 }
 }
