@@ -16,7 +16,7 @@ node () {
  				bat "mvn clean package " 
 			} 
  		}
-// Unable to convert a build step referring to "hudson.plugins.copyartifact.CopyArtifact". Please verify and convert manually if required. 
+		archiveArtifacts allowEmptyArchive: false, artifacts: '**/*.war', caseSensitive: true, defaultExcludes: true, fingerprint: false, onlyIfSuccessful: false 
 	}
 	stage ('deploy-to-staging - Build') {
  	
